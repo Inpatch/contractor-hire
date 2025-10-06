@@ -6,4 +6,4 @@ repos:
         entry: .venv/bin/pip freeze > requirements.txt && git add requirements.txt
         language: system
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]
