@@ -1,0 +1,55 @@
+{% extends "navbar.html" %}
+
+
+{% block style %}
+<style>
+
+#latest-pic {
+
+  border-radius: 5%;
+}
+
+.latest {
+      position: relative;
+      display: inline-block;
+    }
+
+    .latest:hover #latest-pic {
+      opacity: 0.3;
+    }
+.image-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      
+    }
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="info-block">
+  <h2>Velkommen</h2>
+  <p>Her kan du finde informationer på mig, mine projekter eller andet.</p>
+  <p>Websiden vil altid være under udvikling, så næste gang du kommer her kan det se helt anderledes ud.</p>
+  <p>Mvh Piet</p>
+  <h2>Se hvordan jeg lavede denne hjemmeside</h2>
+  <div class="latest">
+    <a href="/projects/web_app">
+      <img src="{{ url_for('static', filename='stock2.png') }}" id="latest-pic" alt="Interesserende billede">
+      <div class="image-text">
+        <p>Web_app</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+{% endblock %}
+

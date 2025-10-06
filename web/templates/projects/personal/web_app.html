@@ -1,0 +1,32 @@
+{% extends "navbar.html" %}
+
+{% block style %}
+<style>
+  
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="info-block">
+  <div class="fact-block">
+    <h1>Info om projektet</h1>
+    <p>Backend er skrevet i Python</p>
+    <p>Websiden er skrevet i HTML med styling i css</p>
+    <p>Hosted hos Azure</p>
+    <p>Projektet er udarbejdet af Piet G</p>
+  </div>
+  <h1>Web App</h1>
+  <h2>Resume</h2>
+  <p>I dette projekt var det til formål at skabe en hjemmeside fra bunden, og lære alt hvad der indebærer at køre en web app. Hjemmesidens funktion er at vise
+    mine projekter, og give en kort beskrivelse af dem. Derudover er det muligt at se koden til projekterne, og se billeder fra dem. 
+  </p>
+  <h2>Links</h2>
+  <p> Link here</p>
+  <div class="project_pics">
+    <h2>Billeder fra projektet</h2>
+    <img src="{{ url_for('static', filename='data_energy.png') }}" id="pic" alt="Interesserende billede">
+    <img src="{{ url_for('static', filename='lstm_model1.png') }}" id="pic" alt="Interesserende billede">
+  </div>
+</div>
+{% endblock %}

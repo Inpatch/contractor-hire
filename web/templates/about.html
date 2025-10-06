@@ -1,0 +1,126 @@
+{% extends "navbar.html" %}
+
+
+{% block style %}
+<style>
+  
+.picture_me {
+  float: right;
+  display: block;
+  padding: 5%;
+  text-align: center;
+}
+.picture_me img {
+  
+  border-radius: 50%;
+
+}
+
+.skills_box {
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f5f5f7;
+  border-radius: 10px;
+}
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+
+}
+</style>
+
+
+{% endblock %}
+
+
+{% block content %}
+<div class="info-block">
+    <div class="picture_me">
+        <img src="{{ url_for('static', filename='piet.png') }}" alt="Interesserende billede">
+        <p><b>Piet</b></p>
+        <p> 23år, studerende </p>
+    </div>
+    <h1> Om mig </h1>
+    <p> Jeg er Piet Gravesen, og er udvikleren af hjemmesiden. Jeg er studerende på KEA i "IT and Business Economics", og når jeg ikke studere så udvikler jeg i fritiden, så kig omkring hvis det er interessere dig.</p>
+    <h2> Kompetencer</h2>
+    <div class="boxes">
+        <div class="skills_box">
+            <h3> Kompetencer indenfor udvikling</h3>
+            <ul>
+                <li> Python</li>
+                    <ul>
+                        <li> Flask/web app</li>
+                        <li> Machine learning/Deep learning med Jupyter</li>
+                        <li> Api handling</li>
+                        <li> Data scraping</li>
+                    </ul>
+                <li> HTML</li>
+                    <ul>
+                        <li> Cookie håndtering</li>
+                    </ul>
+                <li> Docker</li>
+                <li> CSS</li>
+                <li> SQL</li>
+                <li> NoSQL</li>
+                <li> Systemudvikling</li>
+                    <ul>
+                        <li> UML</li>
+                        <li> Design Patterns</li>
+                        <li> Microservices</li>
+                        <li> Domain Driven Design</li>
+                        <li> Event sourcing</li>
+                        <li> CQRS</li>
+                        <li> Networking</li>
+                        <li> 4+1</li>
+                        <li> BPMN</li>
+                    </ul>
+                <li>IT sikkerhed</li>
+                    <ul>
+                        <li> Kryptering</li>
+                        <li> Hashing</li>
+                        <li> Certifikater</li>
+                    </ul>    
+            </ul>
+        </div>
+        <div class="skills_box">
+            <h3> Kompetencer indenfor business</h3>
+            <ul>
+                <li> Projektledelse</li>
+                <li> Forandringsledelse</li>
+                    <ul>
+                        <li> ADKAR</li>
+                        <li> Kotter</li>
+                    </ul>
+                <li> Forretningsstrategi</li>
+                    <ul>
+                        <li> SWOT</li>
+                        <li> TOWS</li>
+                        <li> Digital Transformering</li>    
+                    </ul>
+                <li> Marketing</li>
+                    <ul>
+                        <li> Why, What, How</li>
+                    </ul>
+                <li> Økonomi</li>
+                    <ul>
+                        <li> Mikro/Macro-økonomi</li>
+                        <li> Økonomistyring</li>
+                    </ul>
+                <li>Data protection</li>
+                    <ul>
+                        <li> GDPR</li>
+                        <li> DPIA</li>
+                        <li> ISO-Standarder</li>
+                    </ul>
+            </ul>
+        </div>
+    </div>
+    <h2> Kontakt </h2>
+    <p> swathe-boss.0j@icloud.com</p>
+</div>
+
+
+{% endblock %}
+

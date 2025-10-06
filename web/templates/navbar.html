@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <html lang="en">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {% if title %}
+     <title>{{title}}</title>
+    {%else%}
+    <title>Home</title>
+    {%endif%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+
+{% block style %}
+
+{% endblock %}
+
+<script>
+  function acceptCookies() {
+    var cookieBlock = document.getElementById("cookie-block");
+    cookieBlock.style.display = "none";
+    document.cookie = "cookie_consent=true";
+  }   
+</script>
+</head>
+
+<body>
+
+
+<!-- Her bliver navbar lavet og sat in -->
+
+<ul class="navbar">
+  <li><a class="navbar_text" href="/">Hjem</a></li>
+  <li><a class="navbar_text" href="/projects">Projekter</a></li>
+  <li><a class="navbar_text" href="/om">Om</a></li>
+  <li><a class="navbar_text" href="https://www.linkedin.com/in/piet-gravesen-47a9a41b6/" target="_blank">LinkedIn</a></li>
+  <li><a class="navbar_text" href="https://github.com/Inpatch" target="_blank">GitHub</a></li>
+  <li style="float:right; color: black; padding-right: 10px;"><p>Piet - Inpatch</p></li>
+</ul>
+
+
+
+<!-- Den her laver blocken der ligger under navbar. Kan være padding skal ændres til det samme som navbar -->
+
+<header>
+  <div class="block">
+</header>
+
+{% block content %}
+
+{% endblock %}
+{% if cookies_check() %}
+{% else %}
+<div class="cookie-block" id="cookie-block">
+  <p>Virksomheder er glad for mange cookies, men her bliver kun nødvendige benyttet.</p>
+  <button class="cookie-btn" onclick="acceptCookies()">Ok</button>
+</div>
+{% endif %}
+</body>
+
+
+</html>

@@ -1,0 +1,53 @@
+{% extends "navbar.html" %}
+
+{% block style %}
+<style>
+  .latest {
+    display: flex;
+    gap: 20px;
+  }
+
+  .latest-item img {
+    border-radius: 5%;
+  }
+  .latest-item img:hover {
+      opacity: 0.3;
+    }
+
+  #test {
+    color: Black;
+    font-size: 18px;
+    text-align: center;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="info-block">
+  <h1>Skole projekter</h1>
+  <div class="latest">
+    {% for project in projects_school %}
+    <div class="latest-item">
+      <p id="test">{{project}}</p>
+      <a href="/projects/{{project}}">
+
+        <img src="{{ url_for('static', filename='stock1.png') }}" id="latest-pic" alt="Interesserende billede">
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  <h1>Personlige projekter</h1>
+  <div class="latest">
+    {% for project in projects_personal %}
+    <div class="latest-item">
+      <p id="test">{{project}}</p>
+      <a href="/projects/{{project}}">
+        <img src="{{ url_for('static', filename='stock2.png') }}" id="latest-pic" alt="Interesserende billede">
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

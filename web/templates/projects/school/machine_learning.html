@@ -1,0 +1,32 @@
+{% extends "navbar.html" %}
+
+{% block style %}
+<style>
+  
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="info-block">
+  <div class="fact-block">
+    <h1>Info om projektet</h1>
+    <p>Lavet i 4. Semester</p>
+    <p>Lavet for KEA FM</p>
+    <p>Brugte metoder var Linær regression, K-Means, NNL, Linær programmering og PowerBi</p>
+    <p>Brugte programmer var Python(Jupyter), PowerBi og Excel</p>
+    <p>Projektet er udarbejdet af Emil M, Nicolai G, Christian G, Magnus S og Piet G</p>
+  </div>
+  <h1>Machine learning</h1>
+  <h2>Resume</h2>
+  <p>I dette projekt fik vi til opgave at skulle benytte machine learning og linær programmering, til at skulle forbedre noget hos KEA facility management. Hvor at det så skulle visualiseres blandt andet gennem PowerBi.
+    Til løsningen blev der benyttet LSTM, K-Means, NNL, Linær programmering og PowerBi. Hvor at vi fik lavet forskellige modeller der kunne forudsige hvor meget strøm der ville blive brugt på KEA. Hvor at vi fik lavet en model der kunne forudsige hvor meget strøm forbruget samt produceringen af strøm vill være på KEA.
+    Derudover fandt vi ud af hvilke solceller KEA FM skulle købe til fremtiden ved hjælp af linær programmering. 
+  </p>
+  <div class="project_pics">
+    <h2>Billeder fra projektet</h2>
+    <img src="{{ url_for('static', filename='data_energy.png') }}" id="pic" alt="Interesserende billede">
+    <img src="{{ url_for('static', filename='lstm_model1.png') }}" id="pic" alt="Interesserende billede">
+  </div>
+</div>
+{% endblock %}
